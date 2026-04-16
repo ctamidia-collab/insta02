@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Do Zero ao Instagram Montado — Guia Completo</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --black: #0f0f0f;
+      --dark: #1a1a1a;
+      --mid: #4a4a4a;
+      --light: #8a8a8a;
+      --border: #e8e8e8;
+      --bg: #fafafa;
+      --white: #ffffff;
+      --accent: #1a1a1a;
+      --accent-light: #f5f5f5;
+      --gold: #c9a84c;
+      --red: #c0392b;
+      --prompt-bg: #f8f8f8;
+      --prompt-border: #e0e0e0;
+      --tag-p: #2c3e50;
+      --tag-pp: #8B2222;
+      --tag-a: #2d4a2d;
+      --tag-r: #5a4a2d;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--black);
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ---- LAYOUT ---- */
+    .page {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ---- HEADER ---- */
+    .header {
+      padding: 72px 0 56px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 64px;
+    }
+
+    .header-tag {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 20px;
+    }
+
+    .header-title {
+      font-size: 42px;
+      font-weight: normal;
+      line-height: 1.15;
+      color: var(--black);
+      margin-bottom: 16px;
+    }
+
+    .header-title strong {
+      font-weight: normal;
+      border-bottom: 2px solid var(--black);
+    }
+
+    .header-sub {
+      font-size: 17px;
+      color: var(--mid);
+      max-width: 560px;
+      margin-bottom: 40px;
+      font-style: italic;
+    }
+
+    .header-meta {
+      display: flex;
+      gap: 40px;
+    }
+
+    .meta-item {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    .meta-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 3px;
+    }
+
+    .meta-value {
+      font-size: 14px;
+      color: var(--black);
+      font-weight: 500;
+    }
+
+    /* ---- TABLE OF CONTENTS ---- */
+    .toc {
+      background: var(--accent-light);
+      border-left: 3px solid var(--black);
+      padding: 28px 32px;
+      margin-bottom: 64px;
+    }
+
+    .toc-title {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 16px;
+    }
+
+    .toc-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 32px;
+    }
+
+    .toc-list a {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      color: var(--black);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toc-list a:hover { color: var(--mid); }
+
+    .toc-num {
+      font-size: 10px;
+      color: var(--light);
+      font-weight: 700;
+      min-width: 20px;
+    }
+
+    /* ---- SECTIONS ---- */
+    .section {
+      margin-bottom: 72px;
+      padding-top: 16px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 28px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-num {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--light);
+      padding-top: 6px;
+      min-width: 28px;
+    }
+
+    .section-title-group {}
+
+    .section-tag {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: 26px;
+      font-weight: normal;
+      color: var(--black);
+    }
+
+    /* ---- TEXT ---- */
+    .section p {
+      font-size: 15px;
+      color: var(--mid);
+      margin-bottom: 16px;
+      line-height: 1.75;
+    }
+
+    .section p strong {
+      color: var(--black);
+      font-weight: 600;
+    }
+
+    /* ---- CHECKLIST ---- */
+    .checklist {
+      list-style: none;
+      margin: 20px 0 28px;
+    }
+
+    .checklist li {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: var(--black);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .checklist li::before {
+      content: '○';
+      color: var(--light);
+      font-size: 12px;
+      padding-top: 2px;
+      flex-shrink: 0;
+    }
+
+    /* ---- PROMPT BLOCK ---- */
+    .prompt-label {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--light);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .prompt-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+
+    .prompt-block {
+      background: var(--white);
+      border: 1px solid var(--prompt-border);
+      border-radius: 4px;
+      padding: 28px 32px;
+      margin: 12px 0 28px;
+      position: relative;
+    }
+
+    .prompt-block pre {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 13.5px;
+      line-height: 1.8;
+      color: var(--black);
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .prompt-block .placeholder {
+      background: #fff3cd;
+      border-radius: 2px;
+      padding: 0 3px;
+      color: #856404;
+      font-style: normal;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--light);
+      padding: 5px 12px;
+      border-radius: 3px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .copy-btn:hover { border-color: var(--black); color: var(--black); }
+    .copy-btn.copied { border-color: #2d8a2d; color: #2d8a2d; }
+
+    /* ---- ACTION BLOCK ---- */
+    .action-block {
+      background: #f0f7f0;
+      border-left: 3px solid #2d8a2d;
+      padding: 18px 24px;
+      margin: 8px 0 28px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .action-block .action-tag {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #2d8a2d;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .action-block p {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      color: #1a3a1a;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* ---- NOTE BLOCK ---- */
+    .note-block {
+      background: #fef9ec;
+      border-left: 3px solid var(--gold);
+      padding: 18px 24px;
+      margin: 8px 0 28px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .note-block .note-tag {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #8a6a1a;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .note-block p {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      color: #5a4a1a;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* ---- PILLAR CARDS ---- */
+    .pillars {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin: 20px 0 28px;
+    }
+
+    .pillar-card {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 16px 20px;
+      background: var(--white);
+    }
+
+    .pillar-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 4px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: white;
+    }
+
+    .badge-p { background: var(--tag-p); }
+    .badge-pp { background: var(--tag-pp); }
+    .badge-a { background: var(--tag-a); }
+    .badge-r { background: var(--tag-r); }
+
+    .pillar-name {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 4px;
+    }
+
+    .pillar-desc {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      color: var(--light);
+      line-height: 1.5;
+    }
+
+    /* ---- TIMELINE ---- */
+    .timeline {
+      margin: 24px 0 28px;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 20px;
+      padding-bottom: 24px;
+      position: relative;
+    }
+
+    .timeline-item:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 32px;
+      bottom: 0;
+      width: 1px;
+      background: var(--border);
+    }
+
+    .timeline-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--black);
+      flex-shrink: 0;
+    }
+
+    .timeline-content { padding-top: 5px; }
+
+    .timeline-title {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--black);
+      margin-bottom: 3px;
+    }
+
+    .timeline-detail {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      color: var(--light);
+    }
+
+    /* ---- TIME TABLE ---- */
+    .time-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 28px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    .time-table th {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--light);
+      text-align: left;
+      padding: 8px 16px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .time-table td {
+      font-size: 13px;
+      color: var(--black);
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .time-table tr:last-child td {
+      border-bottom: none;
+      font-weight: 600;
+    }
+
+    .time-table tr:last-child { background: var(--accent-light); }
+
+    .time-detail {
+      font-size: 11px;
+      color: var(--light);
+      margin-top: 2px;
+    }
+
+    /* ---- DIVIDER ---- */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 56px 0;
+    }
+
+    /* ---- FOOTER ---- */
+    .footer {
+      padding: 48px 0 64px;
+      border-top: 1px solid var(--border);
+      margin-top: 48px;
+    }
+
+    .footer-note {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 12px;
+      color: var(--light);
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    /* ---- RESPONSIVE ---- */
+    @media (max-width: 600px) {
+      .page { padding: 0 20px; }
+      .header { padding: 48px 0 40px; }
+      .header-title { font-size: 30px; }
+      .toc-list { grid-template-columns: 1fr; }
+      .pillars { grid-template-columns: 1fr; }
+      .header-meta { flex-wrap: wrap; gap: 24px; }
+    }
+
+    /* ---- PRINT ---- */
+    @media print {
+      .copy-btn { display: none; }
+      body { background: white; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-tag">Guia Pratico</div>
+    <h1 class="header-title">Do Zero ao<br><strong>Instagram Montado</strong></h1>
+    <p class="header-sub">O processo completo para criar um perfil que transmite credibilidade, converte visitantes e nao parece loja de dropshipping.</p>
+    <div class="header-meta">
+      <div class="meta-item">
+        <div class="meta-label">Ferramenta</div>
+        <div class="meta-value">Claude Web (claude.ai)</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Prompts</div>
+        <div class="meta-value">10 prompts no total</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Tempo estimado</div>
+        <div class="meta-value">3 a 4 horas</div>
+      </div>
+      <div class="meta-item">
+        <div class="meta-label">Resultado</div>
+        <div class="meta-value">24 posts planejados</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <div class="toc-title">Indice</div>
+    <ul class="toc-list">
+      <li><a href="#prep"><span class="toc-num">00</span> Antes de comecar</a></li>
+      <li><a href="#s1"><span class="toc-num">01</span> Briefing da marca</a></li>
+      <li><a href="#s2"><span class="toc-num">02</span> Os 4 pilares</a></li>
+      <li><a href="#s3"><span class="toc-num">03</span> Banco de imagens</a></li>
+      <li><a href="#s4"><span class="toc-num">04</span> Estrutura do feed</a></li>
+      <li><a href="#s5"><span class="toc-num">05</span> Analise das imagens</a></li>
+      <li><a href="#s6"><span class="toc-num">06</span> Grid final</a></li>
+      <li><a href="#s7"><span class="toc-num">07</span> Visualizacao HTML</a></li>
+      <li><a href="#s8"><span class="toc-num">08</span> Destaques do perfil</a></li>
+      <li><a href="#s9"><span class="toc-num">09</span> Bio do perfil</a></li>
+      <li><a href="#s10"><span class="toc-num">10</span> Credibilidade</a></li>
+      <li><a href="#tempo"><span class="toc-num">+</span> Resumo de tempo</a></li>
+    </ul>
+  </div>
+
+  <!-- SECTION 0 — PREPARAÇÃO -->
+  <div class="section" id="prep">
+    <div class="section-header">
+      <span class="section-num">00</span>
+      <div class="section-title-group">
+        <div class="section-tag">Antes de comecar</div>
+        <h2 class="section-title">O que preparar antes de abrir o Claude</h2>
+      </div>
+    </div>
+
+    <p>Abra um documento em branco e responda essas perguntas. Voce vai precisar dessas respostas no <strong>Prompt 1</strong>. Nao pule essa etapa — quanto mais claro voce for aqui, melhor o Claude vai trabalhar para voce.</p>
+
+    <ul class="checklist">
+      <li>Nome da marca</li>
+      <li>O que voce vende (produto especifico, nao so a categoria)</li>
+      <li>Onde voce vende (pais, plataforma)</li>
+      <li>Quem compra: sexo, faixa etaria, o que essa pessoa aspira ter ou ser</li>
+      <li>Ticket medio do produto</li>
+      <li>Vibe visual desejada — ex: dark e masculino, minimalista branco, colorido e vibrante</li>
+      <li>3 marcas ou contas do Instagram que voce admira visualmente</li>
+      <li>Paleta de cores se ja tiver (codigos HEX ou so descreva: preto, dourado, off-white)</li>
+      <li>Objetivo principal do Instagram: gerar credibilidade para anuncios / vender direto / crescer audiencia</li>
+    </ul>
+
+    <div class="note-block">
+      <div class="note-tag">Importante</div>
+      <p>Faca tudo em uma unica conversa no Claude. Nao feche a aba entre os prompts — o Claude precisa do contexto anterior para dar respostas precisas.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 1 — BRIEFING -->
+  <div class="section" id="s1">
+    <div class="section-header">
+      <span class="section-num">01</span>
+      <div class="section-title-group">
+        <div class="section-tag">Primeiro prompt</div>
+        <h2 class="section-title">Briefing da marca</h2>
+      </div>
+    </div>
+
+    <p>Cole esse prompt no Claude, substitua tudo que esta em <strong>[ colchetes ]</strong> com as suas informacoes, e envie. Esse prompt define o contexto que o Claude vai usar em todos os proximos passos.</p>
+
+    <div class="prompt-label">Prompt 01 — copie e preencha</div>
+    <div class="prompt-block" id="p1">
+      <button class="copy-btn" onclick="copyPrompt('p1', this)">Copiar</button>
+      <pre>Voce vai me ajudar a montar o Instagram de uma marca do zero. Preciso estabelecer o contexto completo para voce trabalhar com precisao em toda a nossa conversa.
+
+Marca: <span class="placeholder">[NOME DA MARCA]</span>
+Produto: <span class="placeholder">[O QUE VENDE — seja especifico]</span>
+Mercado: <span class="placeholder">[ONDE VENDE — ex: Brasil, Europa, EUA]</span>
+Publico: <span class="placeholder">[PERFIL DO CLIENTE — sexo, idade, aspiracoes]</span>
+Ticket medio: <span class="placeholder">[FAIXA DE PRECO]</span>
+Vibe visual: <span class="placeholder">[DESCREVA — ex: dark e masculino, minimalista, vibrante]</span>
+Referencias visuais: <span class="placeholder">[3 MARCAS OU CONTAS QUE ADMIRA]</span>
+Paleta de cores: <span class="placeholder">[CORES HEX OU DESCRICAO]</span>
+Objetivo do Instagram: <span class="placeholder">[GERAR CREDIBILIDADE / VENDER DIRETO / CRESCER AUDIENCIA]</span>
+
+Com esse contexto, confirme que entendeu a marca e me descreva em 3 principios visuais o DNA do feed. Seja especifico para essa marca, nao generico.</pre>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 2 — 4 PILARES -->
+  <div class="section" id="s2">
+    <div class="section-header">
+      <span class="section-num">02</span>
+      <div class="section-title-group">
+        <div class="section-tag">Segundo prompt</div>
+        <h2 class="section-title">Os 4 pilares de conteudo</h2>
+      </div>
+    </div>
+
+    <p>Todo feed bem construido usa 4 tipos de post. O Claude vai adaptar cada um para a sua marca especifica.</p>
+
+    <div class="pillars">
+      <div class="pillar-card">
+        <span class="pillar-badge badge-p">P</span>
+        <div class="pillar-name">Produto</div>
+        <div class="pillar-desc">O produto em si. Textura, detalhes, fundo neutro. Mensagem: objeto de desejo.</div>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-badge badge-pp">PP</span>
+        <div class="pillar-name">Pessoa Usando</div>
+        <div class="pillar-desc">Cliente usando o produto. Cena real ou editorial. Mensagem: "isso combina comigo".</div>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-badge badge-a">A</span>
+        <div class="pillar-name">Ambiente</div>
+        <div class="pillar-desc">O universo onde o produto existe. Aspira um estilo de vida. Mensagem: "e aqui que eu quero estar".</div>
+      </div>
+      <div class="pillar-card">
+        <span class="pillar-badge badge-r">R</span>
+        <div class="pillar-name">Respiro</div>
+        <div class="pillar-desc">Flat lay, acessorios, colagens, ofertas. Quebra o padrao sem sair do universo da marca.</div>
+      </div>
+    </div>
+
+    <div class="prompt-label">Prompt 02 — copie e preencha</div>
+    <div class="prompt-block" id="p2">
+      <button class="copy-btn" onclick="copyPrompt('p2', this)">Copiar</button>
+      <pre>Com base no contexto da <span class="placeholder">[NOME DA MARCA]</span>, defina os 4 pilares de conteudo do feed:
+
+P — Produto (vitrine do produto em si)
+PP — Pessoa Usando (cliente usando o produto)
+A — Ambiente (universo onde o produto existe)
+R — Respiro (lifestyle complementar, flat lay, acessorios, ofertas)
+
+Para cada pilar me de:
+1. Descricao do que postar
+2. Elementos obrigatorios na imagem
+3. Tom da copy e legenda
+4. Mensagem subconsciente que o post deve transmitir
+5. 3 exemplos concretos de cenas para essa marca — especificos o suficiente para eu buscar no Pinterest
+
+Nao me de respostas genericas. Cada exemplo deve ser unico para essa marca.</pre>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 3 — BANCO DE IMAGENS -->
+  <div class="section" id="s3">
+    <div class="section-header">
+      <span class="section-num">03</span>
+      <div class="section-title-group">
+        <div class="section-tag">Terceiro prompt</div>
+        <h2 class="section-title">Banco de imagens</h2>
+      </div>
+    </div>
+
+    <p>O banco de imagens e a base de tudo. O mesmo material alimenta feed, stories, destaques e criativos de anuncio. Meta: <strong>100 imagens ou mais</strong> organizadas em 4 pastas.</p>
+
+    <div class="prompt-label">Prompt 03 — copie e preencha</div>
+    <div class="prompt-block" id="p3">
+      <button class="copy-btn" onclick="copyPrompt('p3', this)">Copiar</button>
+      <pre>Preciso montar um banco de imagens buscando no Pinterest e TikTok.
+
+Me de 10 termos de busca em ingles para cada um dos 4 pilares (P, PP, A, R) — totalizando 40 termos.
+
+Regras:
+- Termos especificos para o universo da <span class="placeholder">[NOME DA MARCA]</span>
+- Pense em como o publico europeu e americano busca esse tipo de imagem
+- Misture termos de produto, lifestyle, editorial e flat lay
+- Evite termos genericos demais
+
+Organize em listas separadas por pilar. Para cada termo, indique em uma linha o tipo de resultado esperado.</pre>
+    </div>
+
+    <div class="action-block">
+      <div class="action-tag">Acao manual — faca agora</div>
+      <p>Abra o Pinterest. Busque cada termo. Salve as melhores imagens em 4 pastas no seu computador: pasta <strong>P</strong>, pasta <strong>PP</strong>, pasta <strong>A</strong>, pasta <strong>R</strong>.<br>Meta: 25 imagens por pasta, 100 no total. So salve o que combina com a vibe da sua marca.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 4 — ESTRUTURA DO FEED -->
+  <div class="section" id="s4">
+    <div class="section-header">
+      <span class="section-num">04</span>
+      <div class="section-title-group">
+        <div class="section-tag">Quarto prompt</div>
+        <h2 class="section-title">Estrutura do feed (24 posts)</h2>
+      </div>
+    </div>
+
+    <p>O MVP para comecar a rodar trafego e <strong>24 posts</strong> — 8 linhas de 3 colunas, como aparece na grade do Instagram. Esse prompt define qual pilar vai em cada posicao.</p>
+
+    <div class="prompt-label">Prompt 04 — copie e use</div>
+    <div class="prompt-block" id="p4">
+      <button class="copy-btn" onclick="copyPrompt('p4', this)">Copiar</button>
+      <pre>Vou planejar o feed inicial com 24 posts: 8 linhas de 3 colunas, como aparece na grade do Instagram.
+
+Me de a distribuicao ideal das 8 linhas com os 4 pilares (P, PP, A, R), respeitando:
+- Nunca dois R seguidos na mesma linha
+- Nenhum padrao previsivel (sem sequencia P, PP, A, R repetida)
+- A linha do topo — ultima a ser postada — deve ser visualmente forte
+- Posts adjacentes devem criar continuidade visual (mesma paleta, mesmo universo)
+
+Formato da resposta:
+Linha 1 (topo — ultima a postar): [pilar] | [pilar] | [pilar]
+Linha 2: ...
+...
+Linha 8 (base — primeira a postar): ...
+
+Apos a tabela, explique em uma linha a logica de continuidade visual de cada linha.</pre>
+    </div>
+
+    <div class="note-block">
+      <div class="note-tag">Como funciona a ordem de postagem</div>
+      <p>No Instagram, o post mais recente aparece no canto superior esquerdo. Por isso voce posta de baixo para cima: comeca pela Linha 8 (Posts 1, 2, 3) e termina pela Linha 1 (Posts 22, 23, 24). O visitante que entrar no perfil ve a Linha 1 primeiro.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 5 — ANÁLISE DAS IMAGENS -->
+  <div class="section" id="s5">
+    <div class="section-header">
+      <span class="section-num">05</span>
+      <div class="section-title-group">
+        <div class="section-tag">Quinto prompt</div>
+        <h2 class="section-title">Analise das imagens coletadas</h2>
+      </div>
+    </div>
+
+    <p>Agora voce vai enviar as imagens que coletou para o Claude avaliar. Ele vai dizer quais aprovam, quais reprovar e por que.</p>
+
+    <div class="prompt-label">Prompt 05 — copie e use</div>
+    <div class="prompt-block" id="p5">
+      <button class="copy-btn" onclick="copyPrompt('p5', this)">Copiar</button>
+      <pre>Agora vou te enviar as imagens que coletei para o banco da <span class="placeholder">[NOME DA MARCA]</span>.
+
+Para cada imagem que eu enviar, me diga:
+1. Pilar sugerido (P, PP, A ou R)
+2. Nota de alinhamento com a vibe da marca — de 1 a 10
+3. Se nota 7 ou mais: uma linha descrevendo o que a imagem transmite e por que funciona
+4. Se nota abaixo de 7: o que esta errado (cor, vibe, composicao)
+
+Aguardo as imagens. Vou enviar em grupos de 5.</pre>
+    </div>
+
+    <div class="action-block">
+      <div class="action-tag">Como enviar imagens no Claude Web</div>
+      <p>Clique no icone de clipe ou de imagem ao lado do campo de texto. Selecione ate 5 imagens por mensagem. Envie um grupo, espere a analise, envie o proximo. Repita ate cobrir suas melhores imagens.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 6 — GRID FINAL -->
+  <div class="section" id="s6">
+    <div class="section-header">
+      <span class="section-num">06</span>
+      <div class="section-title-group">
+        <div class="section-tag">Sexto prompt</div>
+        <h2 class="section-title">Montagem do grid final</h2>
+      </div>
+    </div>
+
+    <p>Com as imagens aprovadas e a estrutura definida, o Claude monta o grid completo com os 24 posts ja atribuidos, com copy e legenda para cada um.</p>
+
+    <div class="prompt-label">Prompt 06 — copie e use</div>
+    <div class="prompt-block" id="p6">
+      <button class="copy-btn" onclick="copyPrompt('p6', this)">Copiar</button>
+      <pre>Com base nas imagens aprovadas e na estrutura de feed que definimos, monte o grid final com 24 posts.
+
+Para cada post me de:
+- Numero do post (1 = primeiro a postar = base do feed / 24 = ultimo = topo)
+- Pilar (P, PP, A ou R)
+- Qual imagem usar — descreva pelo que aparece ou use o nome que eu dei ao arquivo
+- Copy da imagem (maximo 10 palavras)
+- Legenda completa: gancho na primeira linha + 2-3 linhas de corpo + 3 hashtags nichadas
+
+Organize em formato de tabela. Depois da tabela, me de a sequencia exata de postagem em texto simples:
+"Post 1 → Post 2 → Post 3..."</pre>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 7 — HTML -->
+  <div class="section" id="s7">
+    <div class="section-header">
+      <span class="section-num">07</span>
+      <div class="section-title-group">
+        <div class="section-tag">Setimo prompt</div>
+        <h2 class="section-title">Visualizacao do feed em HTML</h2>
+      </div>
+    </div>
+
+    <p>Antes de postar, visualize o feed completo como ele vai aparecer para o visitante. O Claude gera um arquivo HTML que voce abre no navegador e consegue ver a grade com as imagens reais.</p>
+
+    <div class="prompt-label">Prompt 07 — copie e preencha</div>
+    <div class="prompt-block" id="p7">
+      <button class="copy-btn" onclick="copyPrompt('p7', this)">Copiar</button>
+      <pre>Gere um arquivo HTML completo que visualize o feed do Instagram como ele vai aparecer para o visitante.
+
+O HTML deve ter:
+- Grade 3x8 mostrando os 24 posts em miniatura com numero e badge de pilar colorido
+- Navegacao por slides com teclas seta esquerda e seta direita
+- Um slide por linha com 3 imagens grandes
+- Em cada post: numero, pilar, nome do arquivo, descricao
+- Cores da marca: <span class="placeholder">[INFORME AS CORES HEX OU DESCREVA]</span>
+- Fundo: <span class="placeholder">[ESCURO / CLARO]</span>
+
+Posts em ordem visual do topo para base:
+<span class="placeholder">[LISTE AQUI OS 24 POSTS NO FORMATO:
+Post 22: pilar | nome do arquivo | descricao
+Post 23: ...
+...
+Post 1: ...]</span>
+
+Gere o codigo em um unico bloco HTML completo, pronto para salvar e abrir no navegador.</pre>
+    </div>
+
+    <div class="action-block">
+      <div class="action-tag">Como usar o codigo gerado</div>
+      <p>
+        1. Copie todo o codigo HTML que o Claude gerar.<br>
+        2. Abra o Bloco de Notas ou qualquer editor de texto.<br>
+        3. Cole o codigo e salve como <strong>feed-grid.html</strong>.<br>
+        4. Coloque as imagens na mesma pasta que o arquivo HTML.<br>
+        5. Abra o arquivo <strong>feed-grid.html</strong> no seu navegador para visualizar.
+      </p>
+    </div>
+
+    <div class="note-block">
+      <div class="note-tag">Atencao nos caminhos das imagens</div>
+      <p>Se as imagens estiverem em subpastas, ajuste o caminho no HTML. Ex: se as imagens estao em uma pasta chamada <strong>fotos/</strong>, o src fica <code>fotos/nome-da-imagem.jpg</code>. Voce pode pedir para o Claude corrigir os caminhos se precisar.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 8 — DESTAQUES -->
+  <div class="section" id="s8">
+    <div class="section-header">
+      <span class="section-num">08</span>
+      <div class="section-title-group">
+        <div class="section-tag">Oitavo prompt</div>
+        <h2 class="section-title">Destaques do perfil</h2>
+      </div>
+    </div>
+
+    <p>Os destaques sao o que separa um perfil de marca real de um perfil de drop generico. Toda loja tem os destaques funcionais. A diferenca esta nos destaques de marca.</p>
+
+    <div class="prompt-label">Prompt 08 — copie e preencha</div>
+    <div class="prompt-block" id="p8">
+      <button class="copy-btn" onclick="copyPrompt('p8', this)">Copiar</button>
+      <pre>Monte a estrutura completa dos destaques do Instagram para a <span class="placeholder">[NOME DA MARCA]</span>.
+
+Divida em dois grupos:
+1. Destaques funcionais — obrigatorios para qualquer loja
+2. Destaques de marca — os que diferenciam de um drop generico
+
+Para cada destaque:
+- Nome do destaque
+- Quantos stories precisa ter
+- O que mostrar em cada story (lista resumida)
+- Como a capa deve ser visualmente
+
+Depois escreva o texto completo dos stories do destaque FAQ, cobrindo:
+entrega, garantia, devolucao, autenticidade e formas de pagamento.
+
+Tom: profissional, confiante, direto. Sem exclamacoes. Nao pode parecer script de marketplace.</pre>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 9 — BIO -->
+  <div class="section" id="s9">
+    <div class="section-header">
+      <span class="section-num">09</span>
+      <div class="section-title-group">
+        <div class="section-tag">Nono prompt</div>
+        <h2 class="section-title">Bio do perfil</h2>
+      </div>
+    </div>
+
+    <p>A bio e a primeira coisa que o visitante le. Ela precisa comunicar o que a marca e, o que o cliente ganha e onde clicar — em menos de 4 linhas.</p>
+
+    <div class="prompt-label">Prompt 09 — copie e preencha</div>
+    <div class="prompt-block" id="p9">
+      <button class="copy-btn" onclick="copyPrompt('p9', this)">Copiar</button>
+      <pre>Escreva 3 versoes da bio do Instagram para a <span class="placeholder">[NOME DA MARCA]</span>.
+
+Cada versao deve ter no maximo 4 linhas:
+- Linha 1: o que e a marca (maximo 6 palavras)
+- Linha 2: o que o cliente ganha / proposta de valor
+- Linha 3: prova social ou diferencial (ex: "Enviamos para 30 paises")
+- Linha 4: CTA com link (ex: "Compre agora")
+
+Versao 1: foco em autoridade e premium
+Versao 2: foco em beneficio direto para o cliente
+Versao 3: foco em comunidade e estilo de vida
+
+Apos as 3 versoes, me diga qual voce recomenda e por que.</pre>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SECTION 10 — CREDIBILIDADE -->
+  <div class="section" id="s10">
+    <div class="section-header">
+      <span class="section-num">10</span>
+      <div class="section-title-group">
+        <div class="section-tag">Decimo prompt</div>
+        <h2 class="section-title">Estrategia de credibilidade</h2>
+      </div>
+    </div>
+
+    <p>A credibilidade nao vem de um elemento isolado. Vem da soma: feed bem feito, destaques de marca, numero de seguidores proporcional, stories ativos e prova social. Quando tudo encaixa, o visitante para de questionar se e real.</p>
+
+    <div class="prompt-label">Prompt 10 — copie e preencha</div>
+    <div class="prompt-block" id="p10">
+      <button class="copy-btn" onclick="copyPrompt('p10', this)">Copiar</button>
+      <pre>Preciso montar a estrategia de credibilidade para o perfil da <span class="placeholder">[NOME DA MARCA]</span> — que vai ser usado para gerar confianca em quem chega via anuncio.
+
+Me explique em detalhes:
+1. Quantos seguidores o perfil precisa ter para parecer crivel considerando <span class="placeholder">[X]</span> posts publicados
+2. Quais tipos de perfis seguir para nao parecer conta fantasma
+3. Como criar o efeito de "marca que ja existe ha tempo" sem ter historico real
+4. Como montar o destaque de Avaliacoes sem ter avaliacoes reais ainda
+5. Como estruturar os primeiros 30 dias de stories apos o lancamento
+6. Quando e o momento certo para comecar a rodar trafego pago para o perfil
+
+Seja especifico em numeros, frequencias e acoes concretas.</pre>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- TEMPO -->
+  <div class="section" id="tempo">
+    <div class="section-header">
+      <span class="section-num"></span>
+      <div class="section-title-group">
+        <div class="section-tag">Estimativa</div>
+        <h2 class="section-title">Quanto tempo leva</h2>
+      </div>
+    </div>
+
+    <table class="time-table">
+      <thead>
+        <tr>
+          <th>Etapa</th>
+          <th>Tempo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            Preparacao (antes de abrir o Claude)
+            <div class="time-detail">Preencher o briefing da marca</div>
+          </td>
+          <td>15 min</td>
+        </tr>
+        <tr>
+          <td>
+            Prompts 1 a 4 — planejamento
+            <div class="time-detail">Briefing, pilares, termos de busca, estrutura do feed</div>
+          </td>
+          <td>30 min</td>
+        </tr>
+        <tr>
+          <td>
+            Coleta de imagens no Pinterest
+            <div class="time-detail">100 imagens em 4 pastas</div>
+          </td>
+          <td>60 a 90 min</td>
+        </tr>
+        <tr>
+          <td>
+            Prompts 5 e 6 — analise e grid
+            <div class="time-detail">Envio das imagens e montagem final dos 24 posts</div>
+          </td>
+          <td>30 min</td>
+        </tr>
+        <tr>
+          <td>
+            Prompt 7 — visualizacao HTML
+            <div class="time-detail">Geracao do arquivo + abrir no navegador</div>
+          </td>
+          <td>15 min</td>
+        </tr>
+        <tr>
+          <td>
+            Prompts 8, 9 e 10 — destaques, bio e credibilidade
+            <div class="time-detail">Estrutura final do perfil</div>
+          </td>
+          <td>25 min</td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td>3 a 4 horas</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="note-block">
+      <div class="note-tag">Recomendacao</div>
+      <p>Faca o processo em uma unica sessao. Dividir em varios dias faz voce perder o contexto no Claude e ter que repetir informacoes. Reserve 4 horas continuas e siga os prompts em ordem.</p>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <p class="footer-note">
+      Esse guia usa o Claude Web (claude.ai). Voce pode usar a versao gratuita para a maioria dos passos. A versao paga (Claude Pro) permite enviar mais imagens por conversa e gera respostas mais longas, o que ajuda especialmente nos Prompts 5 e 6.
+    </p>
+  </div>
+
+</div>
+
+<!-- COPY BUTTON SCRIPT -->
+<script>
+  function copyPrompt(id, btn) {
+    const block = document.getElementById(id);
+    const pre = block.querySelector('pre');
+
+    // Get text without placeholder styling
+    const text = pre.innerText || pre.textContent;
+
+    navigator.clipboard.writeText(text).then(() => {
+      btn.textContent = 'Copiado';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copiar';
+        btn.classList.remove('copied');
+      }, 2000);
+    }).catch(() => {
+      // Fallback
+      const range = document.createRange();
+      range.selectNode(pre);
+      window.getSelection().removeAllRanges();
+      window.getSelection().addRange(range);
+      document.execCommand('copy');
+      window.getSelection().removeAllRanges();
+      btn.textContent = 'Copiado';
+      btn.classList.add('copied');
+      setTimeout(() => {
+        btn.textContent = 'Copiar';
+        btn.classList.remove('copied');
+      }, 2000);
+    });
+  }
+</script>
+
+</body>
+</html>
